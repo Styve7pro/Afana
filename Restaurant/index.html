@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Afana AfroCentrique Fast Food </title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="./images/logo.jpg" alt="Logo Afana AfroCentrique Fast Food" width="90px">
+                <p><span class="orange">Afana</span> AfroCentrique</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#acceuil">Acceuil</a></li>
+                <li><a href="#apropos">A Propos de Nous</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+            <img src="./images/burger-menu.png" alt="menu-Burger" class="menu-Burger">
+        </nav>
+    </header>
+    <section class="acceuil" id="acceuil">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="./images/video.mov" type="video/mp4">
+            Votre navigateur ne prend pas en charge la balise vidéo.
+        </video>
+        <div class="acceuiltext">
+            <h1>Votre Fast Food aux <span class="orange">Saveurs Africaines</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo enim repudiandae in aut doloribus maiores optio.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo enim repudiandae in aut doloribus maiores optio.</p>
+        </div>
+
+    </section>
+
+    <section id="apropos" class="apropos">
+        <div class="img">
+            <img src="./images/about.JPG" alt="aboutUs">
+        </div>
+        <div class="text">
+            <h3>A propos de nous</h3>
+            <h2>Le Meilleur au bas prix</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, fuga. <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, amet possimus. <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum tenetur itaque, nisi porro voluptates libero! <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquid culpa accusamus omnis est deleniti! <br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit autem laboriosam expedita asperiores soluta?</p>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="text">
+            <h3>Notre Menu</h3>
+            <h2>Que des Délices</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, fuga. <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, amet possimus. <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum tenetur itaque, nisi porro voluptates libero! <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquid culpa accusamus omnis est deleniti! <br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit autem laboriosam expedita asperiores soluta?</p>
+        </div>
+        <div class="carrousel">
+            <section class="splide" aria-labelledby="carousel-heading">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="./images/1.JPG" alt=""></li>
+                        <li class="splide__slide"><img src="./images/2.JPG" alt=""></li>
+                        <li class="splide__slide"><img src="./images/3.JPG" alt=""></li>
+                        <li class="splide__slide"><img src="./images/4.JPG" alt=""></li>
+                        <li class="splide__slide"><img src="./images/5.JPG" alt=""></li>
+                        <li class="splide__slide"><img src="./images/6.JPG" alt=""></li>
+                        <li class="splide__slide"><img src="./images/7.JPG" alt=""></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </section>   
+    
+    <section id="contacts" class="contacts">
+        <div class="contact-info">
+            <h3>Nous Contacter</h3>
+            <div class="noscontacts">
+                <i class="fab fa-instagram"></i>
+                <a href="">Instagram</a>
+            </div>
+            <div class="noscontacts">
+                <i class="fab fa-facebook"></i>
+                <a href="">Facebook</a>
+            </div>
+            <div class="noscontacts">
+                <i class="fas fa-envelope"></i>
+                <a href="">afanafastfood@gmail.com</a>
+            </div>
+            <div class="noscontacts">
+                <i class="fas fa-mobile-alt"></i>
+                <a href="">05 527 68 63</a>
+            </div>
+            <div class="noscontacts">
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="">Centre ville, Rond point Kassai en diagonale de ACSe, Pointe-Noire Congo Brazzaville</a>
+            </div>
+        </div>
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=AFANA+Afrocentric+fast-food" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        const menuHamburger = document.querySelector(".menu-Burger")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        });
+
+        document.addEventListener( 'DOMContentLoaded', function() {
+        var splide = new Splide( '.splide', {
+            type : 'loop'
+        });
+        splide.mount();
+        } );
+</script>
+</body>
+</html>
